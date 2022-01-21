@@ -3,19 +3,18 @@ using UnityEngine;
 
 public class Enemy : Creature
 {
-    [SerializeField] private List<Transform> _waypoints;
+    [SerializeField] private List<Waypoint> _waypoints;
 
     private int _waypointIndex = 0;
 
     private void Start()
     {
-        Transform.position = _waypoints[_waypointIndex].position;
+        Transform.position = _waypoints[_waypointIndex].transform.position;
     }
 
     private void Update()
     {
         Move();
-        TryChangeSprite();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -28,9 +27,9 @@ public class Enemy : Creature
 
     public override void Move()
     {
-        Transform.position = Vector3.MoveTowards(Transform.position, _waypoints[_waypointIndex].position, Speed * Time.deltaTime);
+        Transform.position = Vector3.MoveTowards(Transform.position, _waypoints[_waypointIndex].transform.position, Speed * Time.deltaTime);
 
-        if (Transform.position == _waypoints[_waypointIndex].position)
+        if (Transform.position == _waypoints[_waypointIndex].transform.position)
             _waypointIndex++;
         if (_waypointIndex == _waypoints.Count)
             _waypointIndex = 0;
@@ -38,13 +37,9 @@ public class Enemy : Creature
 
     public override void TryChangeSprite()
     {
-        if (Transform.position.y < _waypoints[_waypointIndex].position.y)
-        {
-            SetSprite(SecondElementIndexConst);
-        }
-        else
-        {
+        if (_waypoints[_waypointIndex].IsTop)
             SetSprite(FirstElementIndexConst);
-        }
+        else
+            SetSprite(SecondElementIndexConst);
     }
 }

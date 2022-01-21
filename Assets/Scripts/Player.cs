@@ -33,7 +33,6 @@ public class Player : Creature
         Move();
     }
 
-
     public override void Move()
     {
         Vector3 moveInput = new Vector3(_joystick.Horizontal, _joystick.Vertical);
