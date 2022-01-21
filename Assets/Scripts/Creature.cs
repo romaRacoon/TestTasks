@@ -2,6 +2,11 @@ using UnityEngine;
 
 public abstract class Creature : MonoBehaviour
 {
+    protected const int FirstElementIndexConst = 0;
+    protected const int SecondElementIndexConst = 1;
+    protected const int ThirdElementIndexConst = 2;
+    protected const int FourthElemenIndexConst = 3;
+
     [SerializeField] private Sprite[] _sprites;
     [SerializeField] private float _speed;
     [SerializeField] private SpriteRenderer _spriteRenderer;

@@ -8,11 +8,6 @@ public class Player : Creature
     private const int _minimumBombsConst = 0;
     private const int _maximumBombsConst = 3;
 
-    private const int _firstElementIndexConst = 0;
-    private const int _secondElementIndexConst = 1;
-    private const int _thirdElementIndexConst = 2;
-    private const int _fourthElemenIndexConst = 3;
-
     [SerializeField] private Joystick _joystick;
     [SerializeField] private Bomb _bomb;
 
@@ -49,13 +44,13 @@ public class Player : Creature
     public override void TryChangeSprite()
     {
         if (_joystick.Horizontal > _templateConst)
-            SetSprite(_firstElementIndexConst);
+            SetSprite(FirstElementIndexConst);
         if (_joystick.Horizontal < -_templateConst)
-            SetSprite(_secondElementIndexConst);
+            SetSprite(SecondElementIndexConst);
         if (_joystick.Vertical > _templateConst)
-            SetSprite(_fourthElemenIndexConst);
+            SetSprite(FourthElemenIndexConst);
         if (_joystick.Vertical < -_templateConst)
-            SetSprite(_thirdElementIndexConst);
+            SetSprite(ThirdElementIndexConst);
     }
 
     public void PlantBomb()

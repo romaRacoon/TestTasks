@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class Enemy : Creature
 {
-    private const int _firstElementIndexConst = 0;
-    private const int _secondElementIndexConst = 1;
-
     [SerializeField] private List<Transform> _waypoints;
 
     private int _waypointIndex = 0;
@@ -43,11 +40,11 @@ public class Enemy : Creature
     {
         if (Transform.position.y < _waypoints[_waypointIndex].position.y)
         {
-            SetSprite(_secondElementIndexConst);
+            SetSprite(SecondElementIndexConst);
         }
         else
         {
-            SetSprite(_firstElementIndexConst);
+            SetSprite(FirstElementIndexConst);
         }
     }
 }
