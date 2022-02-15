@@ -54,3 +54,8 @@ The player can spend these coins to improve.
 >>> The start screen with the Play button to start the level. The Fail screen with the Restart button to restart the level. Victory screen with Completed and Continue button. The amount of coins accumulated by the player, is displayed at the top right of the screen. Button on the start screen, allowing you to spend the accumulated coins. Each press increases the cost of the next by 1. The inscription with the level number at the top of the screen, when you win, the level number should change.
 
 #### [Реализация ТЗ Implementation of the terms of reference](https://github.com/romaRacoon/TestTasks/tree/allemo)
+--------------------
+### GDR(15.02.22)
+#### ТЗ Terms of reference
+>> На экране видим 1 квадрат и 5 кружков. Квадрат управляется нажатием кнопки мыши. Также есть счетчик,который отображает собранные круги. Если все круги собраны,то появляется кнопка Restart, которая перезапускает уровень при нажатии на нее. On the screen we see 1 square and 5 circles. The square is controlled by pressing the mouse button. There is also a counter that displays the collected circles. If all the circles are collected,there is a button Restart, which restarts the level when you click on it
+#### [Реализация ТЗ Implementation of the terms of reference](https://github.com/romaRacoon/TestTasks/tree/GDR)
